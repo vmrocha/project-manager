@@ -1,6 +1,6 @@
 module ProjectsHelper
   def progress_bar(project)
-    display_text = "#{project.completion_ratio}%"
+    display_text = "#{(project.completion_ratio * 100).round}%"
     color = project.completion_ratio < 1 ? "is-warning" : "is-success"
     tag.progress(
       display_text,

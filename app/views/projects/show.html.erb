@@ -3,9 +3,12 @@
 <%= render "projects/header", project: @project %>
 
 <table class="table is-bordered is-fullwidth is-stripped">
-  <tr>
-    <th>Name</th>
-  </tr>
+  <thead>
+    <tr>
+      <th style="width: 0;"></th>
+      <th>Name</th>
+    </tr>
+  </thead>
 
   <%= render partial: "projects/task", collection: @project.tasks %>
 </table>
