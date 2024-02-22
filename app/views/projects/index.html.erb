@@ -1,6 +1,8 @@
 <h1 class="title">Projects</h1>
 <h2 class="subtitle">You have <%= pluralize(@projects.size, "project") %></h2>
 
+<%= render "projects/add_project_form" %>
+
 <table class="table is-bordered is-fullwidth is-stripped">
   <tr>
     <th>Name</th>
@@ -9,5 +11,3 @@
 
   <%= render partial: "projects/project", collection: @projects %>
 </table>
-
-<%= link_to "New project", new_project_path %>
