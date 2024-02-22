@@ -3,7 +3,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: %i[update destroy ]
 
   def create
-    @task = @project.tasks.build(task_params)
+    @task = @project.tasks.new(task_params)
 
     if @task.save
       redirect_to project_url(@project)

@@ -6,7 +6,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @tasks = @project.tasks.order(id: :desc)
   end
 
   def new
