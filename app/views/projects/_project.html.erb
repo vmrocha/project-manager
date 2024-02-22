@@ -3,10 +3,6 @@
     <%= link_to project.name, project %>
   </td>
   <td>
-    <progress
-      class="progress is-primary"
-      value="<%= project.tasks.completed.count %>"
-      max="<%= project.tasks.count %>">
-    </progress>
+    <%= progress_bar(project) %>
   </td>
 </tr>
