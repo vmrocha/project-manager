@@ -1,7 +1,7 @@
 <%= form_with model: [project, project.tasks.new] do |form| %>
   <div class="field is-grouped mb-4">
     <div class="control is-expanded">
-      <%= form.text_field :title, class: "input", placeholder: "Add new task..." %>
+      <%= form.text_field :title, class: "input", placeholder: "Add new task...", autofocus: true %>
     </div>
 
     <div class="control">
