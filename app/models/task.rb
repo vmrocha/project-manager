@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-  belongs_to :project
+  belongs_to :project, touch: true
 
   validates :title, presence: true
 
