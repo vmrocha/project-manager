@@ -1,13 +1,9 @@
-<h1 class="title">
-  <%= project.name %>
-</h1>
-
-<%= progress_bar(project) %>
-
 <div class="level">
   <div class="level-left">
     <div class="level-item">
-      <span class="tag is-info"><%= project.tasks.completed.count %> / <%= project.tasks.count %> </span>
+      <h1 class="title">
+        <%= project.name %>
+      </h1>
     </div>
   </div>
 
@@ -21,3 +17,5 @@
     </div>
   </div>
 </div>
+
+<%= progress_bar(project) %>

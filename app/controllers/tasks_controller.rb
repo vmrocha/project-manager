@@ -20,15 +20,15 @@ class TasksController < ApplicationController
     @task = @project.tasks.build(task_params)
 
     if @task.save
-      redirect_to project_url(@project), notice: "Task was successfully created."
+      redirect_to project_url(@project)
     else
-      render :new, status: :unprocessable_entity
+      redirect_to project_path(@project), status: :unprocessable_entity
     end
   end
 
   def update
     if @task.update(task_params)
-      redirect_to project_url(@project), notice: "Task was successfully updated."
+      redirect_to project_url(@project)
     else
       render :edit, status: :unprocessable_entity
     end
@@ -37,7 +37,7 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy!
 
-    redirect_to project_path(@task.project), notice: "Task was successfully destroyed."
+    redirect_to project_path(@task.project)
   end
 
   private

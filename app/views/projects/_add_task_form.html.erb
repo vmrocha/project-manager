@@ -1,0 +1,10 @@
+<%= form_with model: [project, project.tasks.new] do |form| %>
+  <div class="field is-grouped mb-4">
+    <div class="control is-expanded">
+      <%= form.text_field :title, class: "input", placeholder: "New task" %>
+    </div>
+    <div class="control">
+      <%= form.submit "Add", class: "button is-info" %>
+    </div>
+  </div>
+<% end%>
