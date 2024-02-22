@@ -6,7 +6,7 @@
       <% end %>
     <% end %>
   </td>
-  <td>
-    <%= link_to task.title, [project, task] %>
+  <td class="<%= "task--completed" if task.completed? %>">
+    <%= task.title %>
   </td>
 </tr>
