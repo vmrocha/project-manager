@@ -16,6 +16,18 @@
 
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
+.task {
+  .button {
+    visibility: hidden;
+  }
+
+  &:hover {
+    .button {
+      visibility: visible;
+    }
+  }
+}
+
 .task--completed {
   text-decoration: line-through;
 }
