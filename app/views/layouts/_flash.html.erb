@@ -1,0 +1,5 @@
+<% flash.each do |_type, message| %>
+  <article class="message is-primary">
+    <%= content_tag(:div, message, class: "message-body") %>
+  </article>
+<% end %>
