@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Projects</h1>
+<h1 class="title">Projects</h1>
+<h2 class="subtitle">You have <%= pluralize(@projects.size, "project") %></h2>
 
-<div id="projects">
-  <% @projects.each do |project| %>
-    <%= render project %>
-    <p>
-      <%= link_to "Show this project", project %>
-    </p>
-  <% end %>
-</div>
+<table class="table is-bordered is-fullwidth is-stripped">
+  <tr>
+    <th>Name</th>
+    <th>Progress</th>
+  </tr>
+
+  <%= render partial: "projects/project", collection: @projects %>
+</table>
 
 <%= link_to "New project", new_project_path %>
