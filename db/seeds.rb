@@ -8,8 +8,8 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-COUNT_PROJECT = 30
-COUNT_TASKS_PER_PROJECT = 20
+COUNT_PROJECT = 10
+COUNT_TASKS_PER_PROJECT = 6
 
 COUNT_PROJECT.times do |i|
   project = Project.create!(name: "Project #{i + 1}")
