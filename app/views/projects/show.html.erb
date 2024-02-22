@@ -10,5 +10,5 @@
     </tr>
   </thead>
 
-  <%= render partial: "projects/task", collection: @project.tasks %>
+  <%= render partial: "projects/task", locals: { project: @project }, collection: @project.tasks %>
 </table>
