@@ -29,6 +29,10 @@
   }
 }
 
+is-narrow {
+  width: 0;
+}
+
 .task--completed {
   text-decoration: line-through;
 }

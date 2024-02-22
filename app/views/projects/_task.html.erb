@@ -1,15 +1,19 @@
-<tr id="<%= dom_id task %>">
-  <td>
+<tr class="task" id="<%= dom_id task %>">
+  <td class="is-vcentered is-narrow">
     <%= form_with model: [project, task], data: { controller: "form" } do |form| %>
       <%= form.label :completed, class: "checkbox", for: dom_id(task, :completed) do %>
         <%= form.check_box :completed, class: "checkbox", id: dom_id(task, :completed), data: { action: "form#submit" } %>
       <% end %>
     <% end %>
   </td>
-  <td class="<%= "task--completed" if task.completed? %>">
+  <td class="<%= "task--completed " if task.completed? %>is-vcentered">
     <%= task.title %>
   </td>
-  <td class="is-right">
-    <%= button_to "Delete", [project, task], class: "button is-danger is-light", method: :delete %>
+  <td class="is-narrow">
+    <%= button_to [project, task], class: "button is-small is-danger is-light is-outlined", method: :delete do %>
+      <span class="icon is-small">
+        <i class="fa fa-times"></i>
+      </span>
+    <% end %>
   </td>
 </tr>
