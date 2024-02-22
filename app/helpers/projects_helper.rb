@@ -4,6 +4,7 @@ module ProjectsHelper
     color = project.completion_ratio < 1 ? "is-warning" : "is-success"
     tag.progress(
       display_text,
+      id: dom_id(project, :progress),
       value: project.tasks.completed.count,
       max: project.tasks.count,
       class: "progress #{color}"
