@@ -1,8 +1,0 @@
-<%= render @task %>
-
-<div>
-  <%= link_to "Edit this task", edit_project_task_path(@task.project_id, @task.id) %> |
-  <%= link_to "Back to project", project_path(@task.project) %>
-
-  <%= button_to "Destroy this task", project_task_path(@task.project_id, @task.id), method: :delete %>
-</div>
