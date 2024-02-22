@@ -14,7 +14,12 @@
     <nav class="navbar is-primary has-shadow" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <%= link_to root_path, class: "navbar-item" do %>
-          <h1 class="title is-uppercase">Home</h1>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fa fa-home"></i>
+            </span>
+            <span>Home</span>
+          </span>
         <% end%>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
